@@ -10,7 +10,7 @@ populated on a post
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <!-- ################ In Doc css ################ -->
+<!-- ################ In Doc css ################ -->
         <style>
             .error{
                 border: 1px solid red;
@@ -22,61 +22,90 @@ populated on a post
                 border: 1px solid red;
             }
         </style>
-        <!-- ################ end In Doc css ################ -->
+<!-- ################ end In Doc css ################ -->
     </head>
     <body>
-        <?php
-        if(!empty($_POST)){
-            $errorMessages = array(
-                "email" => 'email is invalid',
-                "username" => 'username is not found',
-                "password" => 'password does not work',
-            );
-            
+ <!-- ################ functions to add class to fields ################ -->
+        <?php   
+        function EmptyEmail(){
+            $email = filter_input(INPUT_POST, 'email');
+            $class = 'class="inputerror"';
+            if(empty($email)&& empty($_POST)||!empty($email)&& !empty($_POST)){
+               $class = ""; 
+            }
+            echo $class;
+        }
+        function EmptyUsername(){
+            $username = filter_input(INPUT_POST, 'username');
+            $class = 'class="inputerror"';
+            if(empty($username)&& empty($_POST)||!empty($username)&& !empty($_POST)){
+               $class = ""; 
+            }
+            echo $class;
+        }
+        function EmptyPassword(){
+            $password = filter_input(INPUT_POST, 'password');
+            $class = 'class="inputerror"';
+            if(empty($password)&& empty($_POST)||!empty($password)&& !empty($_POST)){
+               $class = ""; 
+            }
+            echo $class;
+        }
+ //<!-- ################end functions to add class to fields ################ -->
+        
+ //<!-- ################function to add .error class to form ################ -->    
+        function FieldValidator(){
             $email = filter_input(INPUT_POST, 'email');
             $username = filter_input(INPUT_POST, 'username');
             $password = filter_input(INPUT_POST, 'password');
             
-            if(!empty($email)){
-                $errorMessage['email']='';
-            }
-            else{
-                echo '<style>input[name=email]{border: 1px solid red;}</style>';
-            }
-            if(!empty($username)){
-                $errorMessage['username']='';
-            }
-            else{
-                echo '<style>input[name=username]{border: 1px solid red;}</style>';
-            }
-            if(!empty($password)){
-                $errorMessages['password']='';
-            }
-            else{
-                echo '<style>input[name=password] {border: 1px solid red;}</style>';
-            }
-        }       
+            if(!empty($_POST)){              
+                $errorMessages = array(
+                    "email" =>'email is invalid',
+                    "username" =>'username is not found',
+                    "password" => 'password does not work',
+                    );
+                if(!empty($email)){
+                    $errorMessages['email']='';                   
+                }               
+                else{
+                    echo '<p class="error">',$errorMessages["email"], '</p>';
+                }
+                 if(!empty($username)){
+                    $errorMessages['username']='';
+                }
+                else{
+                    echo '<p class="error">',$errorMessages["username"], '</p>';
+                }
+                 if(!empty ($password)){
+                    $errorMessages['password']='';
+                }
+                else{
+                    echo '<p class="error">',$errorMessages["password"], '</p>';
+                }
+            }           
+        }
+  //<!-- ################end function to add .error class to form ################ -->             
         ?>
-        
+  <!-- ################ html form ################ -->      
         <h2>Lab3 Form</h2>
         <form name="mainform" action="#" method="post">
-            Email: <input type="text" name="email" /> <br /> 
-            <?php 
-            if ( !empty($errorMessages["email"]) ) 
-                echo '<p class="error">',$errorMessages["email"], '</p>';
-            ?>
-            Username: <input type="text" name="username" /> <br /> 
-            <?php 
-            if ( !empty($errorMessages["username"]) )
-                echo '<p class="error">',$errorMessages["username"], '</p>';                
-            ?>           
-            Password: <input type="password" name="password" /> <br />
-            <?php 
-            if ( !empty($errorMessages["password"]) )
-                echo '<p class="error">',$errorMessages["password"], '</p>';                
-            ?>
+            <?php echo FieldValidator();?>
+            Email: <input type="text" name="email"<?php echo EmptyEmail();?>/> 
+                   
+        
+            <br /> 
+            
+            Username: <input type="text" name="username"<?php echo EmptyUsername();?>/>  
+            
+            <br /> 
+                    
+            Password: <input type="password" name="password"<?php echo EmptyPassword();?>/>  
             <br />
-            <input type="submit" value="Submit" />                        
+           
+            <br />
+            <input type="submit" value="Submit"/>                        
         </form>
+ <!-- ################ end html form ################ -->        
     </body>
 </html>
