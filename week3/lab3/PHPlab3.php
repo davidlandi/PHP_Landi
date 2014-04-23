@@ -85,22 +85,27 @@ populated on a post
                 }
             }           
         }
-  //<!-- ################end function to add .error class to form ################ -->             
+  //<!-- ################end function to add .error class to form ################ --> 
+            $email = filter_input(INPUT_POST, 'email');
+            $username = filter_input(INPUT_POST, 'username');
         ?>
   <!-- ################ html form ################ -->      
         <h2>Lab3 Form</h2>
         <form name="mainform" action="#" method="post">
             <?php echo FieldValidator();?>
-            Email: <input type="text" name="email"<?php echo EmptyEmail();?>/> 
+            Email: <input type="text" name="email"<?php echo EmptyEmail();?> 
+                          value="<?php echo $email; ?>"/> 
                    
         
             <br /> 
             
-            Username: <input type="text" name="username"<?php echo EmptyUsername();?>/>  
+            Username: <input type="text" name="username"<?php echo EmptyUsername();?>
+                             value="<?php echo $username;?>"/>  
             
             <br /> 
                     
-            Password: <input type="password" name="password"<?php echo EmptyPassword();?>/>  
+            Password: <input type="password" name="password"<?php echo EmptyPassword();?>
+                             value=""/>  
             <br />
            
             <br />
