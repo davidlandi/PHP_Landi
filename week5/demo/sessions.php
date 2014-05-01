@@ -18,7 +18,9 @@ and open the template in the editor.
         if ( !isset( $_SESSION['counter']) ) {
              $_SESSION['counter'] = 0;
         }
-       
+       // session data is a super global get activated by session start
+        // checks cookies 
+        // 
          $_SESSION['counter']++;
          
          echo  $_SESSION['counter'];
