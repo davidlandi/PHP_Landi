@@ -1,0 +1,199 @@
+
+html{
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+  position: relative;
+}
+ul{
+	list-style:none;
+}
+
+ul label{
+	width:100px;
+	float:left;
+}
+input[type=button]:hover {
+    background: linear-gradient(to right, #e570e7 0%,#c85ec7 47%,#a849a3 100%); 
+}
+        
+input[type=text]:hover {
+    background-color: #e9f6fd;
+}
+#mainFrm label.error{
+    color: red;
+    margin-top: 5px;
+    font-size: 10px;
+    position:absolute;
+    text-align: center;
+}
+#mainFrm input.error{
+    border: 1px solid red;
+}
+
+#mainCore{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 600px;
+    position: relative;
+    margin:0 auto;
+    margin: 1em auto; 
+}
+header{
+    float:left;
+    margin-top: 100px;
+    width: 100%;  
+}
+#title{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+/*    margin-bottom: 10px;*/
+    width: 400px;
+   height: 100px;
+    background-color: #34495e;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #000000;
+    text-align:  center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-style:  italic;
+    font-size: 30px;
+    line-height: 25px;
+    color: #7f8c8d;
+
+text-shadow: 5px 5px 5px black;
+}
+#titleRight{
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 60%;
+    min-width: 400px;
+    height: 100px;
+    background-color: #34495e;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #000000;
+    text-align:  center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    line-height: 20px;
+    color: #7f8c8d;
+    text-shadow: 2px 2px 2px black;
+}
+#innerCore{
+    float: left;
+/*    margin: 1em auto; */
+/*    padding-bottom: 10px;*/
+/*    height: 400px;*/
+/*    height:300px;*/
+    width: 100%;
+    max-width: 1200px;
+    
+}
+#app{
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color:#bdc3c7;
+    color: black;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: justify;
+    width: 400px;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #000000;
+    
+    
+}
+#mainFrm{
+    
+    width: 360px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+	
+}
+
+
+#tblStoredList{
+   
+
+   
+	width:100%;
+        min-width: 400px;
+       
+       
+	
+	text-align:left;
+/*   	border-collapse:collapse; */
+}
+
+#tblStoredList tbody tr{
+	border:1px solid red;
+	height:30px;
+}
+
+#tblStoredList thead{
+	background:#2980b9;
+}
+
+#appTable{
+   
+    float: left;
+    min-height: 338px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 60%;
+    min-width: 400px;
+    background-color:#ddf2fc;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #000000;
+}
+#btnSave{
+    margin-top:20px; 
+    width:255px;
+    height:50px;
+
+  
+        
+}
+footer{
+    clear: both;
+    width: 100%;  
+}
+#help{
+    float: left;
+    margin-top: 10px;
+    width: 400px;
+    height: 100px;
+    margin-left: 10px;
+    background-color: #34495e;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #000000;
+    text-align:  center;
+    text-decoration: none;
+    font-family: "Arial Black", Gadget, sans-serif;
+    line-height: 20px;
+    color: #7f8c8d;
+    text-shadow: 2px 2px 2px black;
+}
+#about{
+   float: left;
+   margin-top: 10px;
+   width: 60%;
+   min-width: 400px;
+   height: 100px;
+   margin-left: 10px;
+   background-color: #2980b9;
+   border: 1px solid #999999;
+   box-shadow: 0px 0px 5px #000000;
+   font-style: italic;
+   text-align:  center;
+   font-family: "Arial Black", Gadget, sans-serif;
+   line-height: 50px;
+   color: #7f8c8d;
+   text-shadow: 2px 2px 2px black;
+}
+.btn{
+  text-decoration: none; 
+  color: #7f8c8d;
+}
+
+
