@@ -1,0 +1,7 @@
+the colon is for a place holder telling the program that the data is going to be binded
+
+passing an object
+- create new php class
+- create a object model
+    ex: class AdressbookModel. 
+    - create a public function that accepts array 
