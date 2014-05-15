@@ -1,0 +1,19 @@
+Midterm/Final Assignment
+This assignment will expect you to create a software as a service (SaaS) product. The product will include a signup page, login page, a simple content management system (CMS) and a dynamic display page for each user.  Object oriented programming (OOP) techniques must be used to complete this project.
+IMPORTANT: This Lab must be done and submitted by the end of the final class. 
+Requirements:
+	We are creating a single web page that can be used by thousands of customers.
+	•	In your PHP code do the following:
+	•	Create a signup form that will take in an email and password as the login and a website name with only alpha characters [a-Z]. All data should be validated before saved into the database table provided. The password should be hashed.
+	•	Be sure to confirm that a website name has not been taken.  If it has you should return the user to the signup form with a message regarding this.
+	•	Create a login page that will take the users email and password.  If they are successful they should be redirected to the admin(CMS) page.
+	•	Create an admin(CMS) page that will display the content in which the user will manage.  All fields should populate with data retrieved from the database.  When the user updates the data it should be validated and run an update overriding their previous data.
+	•	Create a display page that will take the content and dynamically fill the page based on a website name that was passed in the URL. If an invalid or no website name was passed in the URL, redirect users to the signup page.
+	•	Clarification about the database :
+	•	Please use the database that is given without modification.  Modification of the database will result in 10 points removed towards your final. 
+	•	Extra Credit: Each is worth 10 points.
+	•	Use AJAX to check if the website name has been taken. The message should display indicating if the website name is valid or invalid.
+	•	Have the signup form and the login form on the same page. Use JavaScript to switch between the two forms.
+	•	Create a preview feature on your site that will give the user an idea of how their product will look.
+	•	For display page if an invalid website name is given or no name is passed in the URL, instead of redirecting users to the signup page, redirect users to a webpage with all the websites pages they can visit. 
+sas.site88.net is the sample 
