@@ -1,43 +1,74 @@
 <?php include 'dependency.php'; ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-    </head>
-    <body>
-        <?php
-         //put your code here
-            $msg = '';
-            if ( ! isset($_SESSION['validcode']) ) {
-                $_SESSION['validcode'] = false;   
-            }
-            if ( Util::isPostRequest() ) {
-                $checkcode = new Passcode();
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/landi.css" rel="stylesheet">
+     <title>Access Page</title>
+</head>
+<body>
+<!-- .......................... PHP section ................................ -->
+    <?php
+        $msg = '';
+        if ( ! isset($_SESSION['validcode']) ) {
+            $_SESSION['validcode'] = false;   
+        }
+        if ( Util::isPostRequest() ) {
+            $checkcode = new Passcode();
 
-                if ( $checkcode->isValidPasscode() ) {
-                    $_SESSION['validcode'] = true;
-                    Util::redirect('viewaddress');                   
-                } else {                    
-                    $msg = 'Passcode is not valid.';
-                }
+            if ( $checkcode->isValidPasscode() ) {
+                $_SESSION['validcode'] = true;
+                Util::redirect('viewaddress');                   
+            } else {                    
+                $msg = 'Passcode is not valid.';
             }
-
-            if ( !empty($msg)) {
-                echo '<p>', $msg, '</p>';
-            }
-        ?>
-        
-        
-        <form name="mainform" action="#" method="post"> 
-           <fieldset>
-		<legend>Data Form:</legend>
-                <label for="code">Passcode</label> 
-                <input type="password" name="passcode" id="code" />                
-                <input type="submit" value="Submit" />
-           </fieldset>
-        </form>
-        
-        
-    </body>
+        }
+        if ( !empty($msg)) {
+            echo '<p>', $msg, '</p>';
+        }
+    ?>
+<!-- ....................................................................... -->
+<!-- .......................... Main content ............................... -->
+    <div id="loginModal" class="modal show" tabindex="-1" tabindex="-1"
+             role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">x</button>
+                    <h1 class="text-center">Login</h1>
+                </div>
+                <div class="modal-body">
+                    <form name="mainform" action="#" method="post"
+                        class="form col-md-12 center-block">
+                        <div class="form-group">
+                            <label for="code">Passcode</label>
+                            <input type="password" name="passcode" id="code"
+                                   class="form-control input-lg"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" value="Submit" 
+                                class="btn btn-primary btn-lg btn-block">Submit                                       
+                            </button>
+                        </div>
+                        
+                    </form>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            
+                        </div>
+                    </div>    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+<!-- ....................................................................... -->        
+    <script src="js//jquery.js"></script>		 
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>   
+</body>
 </html>

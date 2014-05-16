@@ -23,8 +23,26 @@ class AddressBook extends DB {
         
     }
     
-    public function update() {
+    public function update($AddressbookModel) {
+        $result = false;
         
+        
+         if ( null !== $this->getDB() && $AddressbookModel instanceof AddressbookModel) {
+            $dbs = $this->getDB()->prepare('update addressbook set address = :address, city = :city, state = :state, zip = :zip, name = :name where id = :id');
+            $dbs->bindParam(':id', $AddressbookModel->id, PDO::PARAM_INT);
+            $dbs->bindParam(':address', $AddressbookModel->address, PDO::PARAM_STR);
+            $dbs->bindParam(':city', $AddressbookModel->city, PDO::PARAM_STR);
+            $dbs->bindParam(':state', $AddressbookModel->state, PDO::PARAM_STR);
+            $dbs->bindParam(':zip', $AddressbookModel->zip, PDO::PARAM_STR);
+            $dbs->bindParam(':name', $AddressbookModel->name, PDO::PARAM_STR);
+            
+            if ( $dbs->execute() && $dbs->rowCount() > 0 ) {
+                $result = true;
+            }
+        
+         }   
+        
+        return $result;
     }
     
     public function read($id = 0) {

@@ -1,11 +1,14 @@
 <?php include 'dependency.php'; ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/landi.css" rel="stylesheet">
+     <title>Update Page</title>
+</head>
+<body>
         <?php
         // put your code here
         
@@ -37,31 +40,67 @@
           //print_r($addressResult);
           
         ?>
+    
+        <div id="loginModal" class="modal show" tabindex="-1" tabindex="-1"
+             role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">x</button>
+                    <h1 class="text-center">Update</h1>
+                </div>
+                <div class="modal-body">
+                    <form name="mainform" action="#" method="post"
+                        class="form col-md-12 center-block">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control input-lg" 
+                                   value="<?php echo $addressResult['name']; ?>"/>          
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" class="form-control input-lg" 
+                                   value="<?php echo $addressResult['address']; ?>"/> 
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" name="city" class="form-control input-lg" 
+                                   value="<?php echo $addressResult['city']; ?>"/>                            
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" name="state" class="form-control input-lg" 
+                                   value="<?php echo $addressResult['state']; ?>"/>                            
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip</label>
+                            <input type="text" name="zip[" class="form-control input-lg" 
+                                   value="<?php echo $addressResult['zip']; ?>"/>                            
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" value="Submit" 
+                                class="btn btn-primary btn-lg btn-block">Submit                                       
+                            </button>
+                            <input type="hidden" name="id" value="<?php echo $addressResult['id']; ?>"/>
+                        </div>
+                        
+                    </form>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            
+                        </div>
+                    </div>    
+                </div>
+            
+            </div>
+        </div>
+    </div>
         
-        <form name="mainform" action="#" method="post"> 
-           <fieldset>
-		<legend>Update:</legend>
-                <label for="name">Name:</label> 
-                <input id="name" type="text" name="name" value="<?php echo $addressResult['name']; ?>" /> <br />
-               
-                <label for="address">Address:</label> 
-                <input id="address" type="text" name="address" value="<?php echo $addressResult['address']; ?>" /> <br />
-               
-                <label for="city">City:</label> 
-                <input id="city" type="text" name="city" value="<?php echo $addressResult['city']; ?>" /> <br />
-               
-                <label for="state">State:</label> 
-                <input id="state" type="text" name="state" value="<?php echo $addressResult['state']; ?>" /> <br />
-                              
-                <label for="zip">ZIP:</label> 
-                <input id="zip" type="text" name="zip" value="<?php echo $addressResult['zip']; ?>" /> <br />
-               
-                
-                <input type="hidden" name="id" value="<?php echo $addressResult['id']; ?>" />
-                <input type="submit" value="Submit" />
-            </fieldset>
-        </form>
         
-        
+    <script src="js//jquery.js"></script>		 
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>      
     </body>
 </html>
