@@ -7,7 +7,7 @@
     </head>
     <body>
         <?php
-        // put your code here
+         //put your code here
             $msg = '';
             if ( ! isset($_SESSION['validcode']) ) {
                 $_SESSION['validcode'] = false;   
