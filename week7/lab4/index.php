@@ -38,9 +38,9 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">x</button>
-                    <h1 class="text-center">Login</h1>
+                    <h1 class="text-center">Address Book Login</h1>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body clearfix">
                     <form name="mainform" action="#" method="post"
                         class="form col-md-12 center-block">
                         <div class="form-group">
@@ -53,14 +53,12 @@
                                 class="btn btn-primary btn-lg btn-block">Submit                                       
                             </button>
                         </div>
-                        
                     </form>
+                    </div>
                     <div class="modal-footer">
-                        <div class="col-md-12">
-                            
-                        </div>
+                       <p class="text-center">David Landi Lab4 Address Book using bootstrap for basic style and reponsive design</p>
                     </div>    
-                </div>
+                
             
             </div>
         </div>

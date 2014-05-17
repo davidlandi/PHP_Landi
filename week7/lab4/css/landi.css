@@ -7,4 +7,22 @@ and open the template in the editor.
     Created on : May 14, 2014, 8:03:03 PM
     Author     : davidlandi
 */
+/*modal-header{
+margin-bottom: 10px;
+}*/
 
+#mainView{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+#viewAb{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.modal-footer{
+    background-color: #bdc3c7;
+}
+.modal-header{
+    background-color: #bdc3c7;
+}

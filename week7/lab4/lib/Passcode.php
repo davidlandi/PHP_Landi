@@ -9,7 +9,8 @@
 /**
  * Description of Passcode
  *
- * @author GFORTI
+ * passcode class is used take in passcoed and determine if it matches the 
+ * set passcode
  */
 class Passcode {
     //put your code here
