@@ -3,6 +3,26 @@
     Created on : May 14, 2014, 8:03:03 PM
     Author     : davidlandi
 */
-.jumbotron{
-   margin-top: 20px;
+
+.marginTop{
+    margin-top: 20px;
+}
+.marginBtm{
+    margin-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.maxWidth{
+    max-width: 810px;
+}
+
+.round{
+    border-radius: 10px;
+}
+
+.colorBlack{
+    background-color: black;
 }

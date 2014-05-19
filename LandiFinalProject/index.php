@@ -23,7 +23,7 @@ JavaScript, Twitter BootStrap framework and SQL.
      <title>Home</title>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -49,6 +49,42 @@ JavaScript, Twitter BootStrap framework and SQL.
             <p>Signup  -  Customize  -  Publish</p><br>
             <p><a class="btn btn-large btn-success" href="#signup">Get Started!</a></p>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                     <div id="slideShow" class="carousel">
+                         <ol class="carousel-indicators">
+                            <li data-target="#slideShow" data-slide-to = "1"</li>
+                            <li data-target="#slideShow" data-slide-to = "2"</li>
+                            <li data-target="#slideShow" data-slide-to = "3"</li>              
+                        </ol>
+                        <center>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="img/sample1.jpg" alt="" class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="img/sample2.jpg" alt="" class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="img/sample1.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                        </center>
+                        <a class="carousel-control left" href="#slideShow" data-slide="prev"> 
+                        <span class="icon-prev"></span></a>
+                        <a class="carousel-control right" href="#slideShow" data-slide="next"> 
+                        <span class="icon-next"></span></a>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <h2>We offer 3 different themes you can choose from.</h2>
+                    </div>
+                
+            </div>
+        </div>
     </div>
+            
+            
 </body>
 </html>
