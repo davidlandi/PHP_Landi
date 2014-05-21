@@ -14,7 +14,7 @@ JavaScript, Twitter BootStrap framework and SQL.
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="css/bootstrap.css" rel="stylesheet">
-     <link href="css/landi.css" rel="stylesheet">
+     <link href="css/landi.css" rel="stylesheet" media="all">
      <script src="js//jquery.js"></script>		 
      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
      <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -42,8 +42,8 @@ JavaScript, Twitter BootStrap framework and SQL.
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="jumbotron text-center">
+    <div class="container shadow colorWhite">
+        <div class="jumbotron text-center shadow marginTop">
             <h1>DL Web Portfolio Builder</h1>
             <h3>Create your own signal page web portfolio to help set you apart from other candidates</h3>
             <p>SignUp, Customize and Submit. 3 easy steps and your done. </p><br>
@@ -54,6 +54,11 @@ JavaScript, Twitter BootStrap framework and SQL.
                 <div class="col-xs-12 col-md-6 pull-left">
                     <h1>Step 1</h1>
                     <p> Sign up.  Fill in the required form information including the name for your portfolio which will also be the name used for the domain if available.</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <a href="#">
+                        <img src="img/signup-icon.png"class="img-responsive center-block imageIcon">
+                    </a>
                 </div>
                 
             </div>
@@ -67,7 +72,7 @@ JavaScript, Twitter BootStrap framework and SQL.
                      <p>Select from one of the 3 three available themes and then fill out the specified information.</p>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                     <div id="slideShow" class="carousel">
+                     <div id="slideShow" class="carousel padR">
                          <ol class="carousel-indicators">
                             <li data-target="#slideShow" data-slide-to = "1"</li>
                             <li data-target="#slideShow" data-slide-to = "2"</li>
@@ -79,10 +84,10 @@ JavaScript, Twitter BootStrap framework and SQL.
                                         <img src="img/temp1.png" alt="" class="img-responsive">
                                     </div>
                                     <div class="item">
-                                        <img src="img/sample2.jpg" alt="" class="img-responsive">
+                                        <img src="img/temp2.png" alt="" class="img-responsive">
                                     </div>
                                     <div class="item">
-                                        <img src="img/sample1.jpg" alt="" class="img-responsive">
+                                        <img src="img/temp3.png" alt="" class="img-responsive">
                                     </div>
                                 </div>
                             </center>
@@ -101,7 +106,10 @@ JavaScript, Twitter BootStrap framework and SQL.
                     <h2>Step 3</h2>
                     <p>After picking your theme and fill out all required sections just hit the submit button and your mobile friendly web portfolio will be instantly created.</p>
                     <p>You will be able to change your theme or the content of the page at any time in needed.</p>
-                </div>            
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <img src="img/success.png" alt="" class="img-responsive center-block ">
+                </div>
             </div>
         </div>
     </div>
