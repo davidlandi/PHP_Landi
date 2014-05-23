@@ -13,7 +13,7 @@ body{
     background-color: #3498db;
 }
 hr{
-    border-top: 1px solid #bdc3c7;
+/*    border-top: 1px solid #bdc3c7;*/
     margin-right: 20px;
 }
 .shadow{
@@ -23,7 +23,8 @@ hr{
     margin-right: 10px;
 }
 .colorWhite{
-    background-color: #ecf0f1;
+/*    background-color: #ecf0f1;*/
+background-color: white;
 }
 .marginTop{
     margin-top: 20px;
@@ -31,9 +32,7 @@ hr{
 .marginBtm{
     margin-bottom: 20px;
 }
-#footer{
-   margin-top: 20px; 
-}
+
 
 .container {
   margin: 0 auto;
@@ -57,18 +56,25 @@ hr{
 .colorBlack{
     background-color: black;
 }
-#footer {
-	background-color: #2f2f2f;
-	padding-top: 50px;
-	padding-bottom: 50px; 
+.logoFont{
+    
+    font-weight: bolder;
+    font-family: 'Poiret One',cursive;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 40px;
+}
+.logoSubFont{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 18px;
+    
+}
+.mainFont{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 18px;
+}
+.labelFont{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #e74c3c;
 }
 
-#footer p {
-	color: white;
-}
-
-#footer h4 {
-	color: white;
-	text-transform: uppercase;
-	padding-bottom: 20px;
-}
