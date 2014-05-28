@@ -54,7 +54,7 @@ class AddressBook extends DB {
         return $result;
     }
     
-    
+   //function to update the address book 
     public function update($AddressbookModel) {
         $result = false;
         
@@ -76,7 +76,7 @@ class AddressBook extends DB {
         
         return $result;
     }
-    
+    //function to return rows if id is selected
     public function read($id = 0) {
        if ($id !== 0) {
            return $this->readByID($id);
@@ -85,7 +85,7 @@ class AddressBook extends DB {
        }
         
     }
-    
+    //function to prep sql to view single entry by id
      private function readByID($id){
            $results = array();
            
@@ -101,7 +101,7 @@ class AddressBook extends DB {
            
            return $results;
      }
-    
+    //function to prep sql statement to view addressbook
     private function readAll(){
          $results = array();
         
@@ -115,10 +115,64 @@ class AddressBook extends DB {
          }        
         return $results;
     }
+    //fuction to populate states dropdown
+    public function getStates(){
+        return array('AL'=>"Alabama",  
+			'AK'=>"Alaska",  
+			'AZ'=>"Arizona",  
+			'AR'=>"Arkansas",  
+			'CA'=>"California",  
+			'CO'=>"Colorado",  
+			'CT'=>"Connecticut",  
+			'DE'=>"Delaware",  
+			'DC'=>"District Of Columbia",  
+			'FL'=>"Florida",  
+			'GA'=>"Georgia",  
+			'HI'=>"Hawaii",  
+			'ID'=>"Idaho",  
+			'IL'=>"Illinois",  
+			'IN'=>"Indiana",  
+			'IA'=>"Iowa",  
+			'KS'=>"Kansas",  
+			'KY'=>"Kentucky",  
+			'LA'=>"Louisiana",  
+			'ME'=>"Maine",  
+			'MD'=>"Maryland",  
+			'MA'=>"Massachusetts",  
+			'MI'=>"Michigan",  
+			'MN'=>"Minnesota",  
+			'MS'=>"Mississippi",  
+			'MO'=>"Missouri",  
+			'MT'=>"Montana",
+			'NE'=>"Nebraska",
+			'NV'=>"Nevada",
+			'NH'=>"New Hampshire",
+			'NJ'=>"New Jersey",
+			'NM'=>"New Mexico",
+			'NY'=>"New York",
+			'NC'=>"North Carolina",
+			'ND'=>"North Dakota",
+			'OH'=>"Ohio",  
+			'OK'=>"Oklahoma",  
+			'OR'=>"Oregon",  
+			'PA'=>"Pennsylvania",  
+			'RI'=>"Rhode Island",  
+			'SC'=>"South Carolina",  
+			'SD'=>"South Dakota",
+			'TN'=>"Tennessee",  
+			'TX'=>"Texas",  
+			'UT'=>"Utah",  
+			'VT'=>"Vermont",  
+			'VA'=>"Virginia",  
+			'WA'=>"Washington",  
+			'WV'=>"West Virginia",  
+			'WI'=>"Wisconsin",  
+			'WY'=>"Wyoming");
+    }
 
 
 
-
+//function to delete entry from db
     public function delete() {
         
     }

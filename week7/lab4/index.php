@@ -31,35 +31,28 @@
     ?>
 <!-- ....................................................................... -->
 <!-- .......................... Main content ............................... -->
-    <div id="loginModal" class="modal show" tabindex="-1" tabindex="-1"
-             role="dialog" aria-hidden="true">
+    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"
-                            aria-hidden="true">x</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                     <h1 class="text-center">Address Book Login</h1>
                 </div>
                 <div class="modal-body clearfix">
-                    <form name="mainform" action="#" method="post"
-                        class="form col-md-12 center-block">
+                    <form name="mainform" action="#" method="post" class="col-md-12 center-block">
                         <div class="form-group">
                             <label for="code">Passcode</label>
-                            <input type="password" name="passcode" id="code"
-                                   class="form-control input-lg"/>
+                            <input type="password" name="passcode" id="code" class="form-control input-lg"/>
                         </div>
                         <div class="form-group">
-                            <button type="submit" value="Submit" 
-                                class="btn btn-primary btn-lg btn-block">Submit                                       
+                            <button type="submit" value="Submit" class="btn btn-primary btn-lg btn-block">Submit                                       
                             </button>
                         </div>
                     </form>
                     </div>
                     <div class="modal-footer">
                        <p class="text-center">David Landi Lab4 Address Book using bootstrap for basic style and reponsive design</p>
-                    </div>    
-                
-            
+                    </div>               
             </div>
         </div>
     </div>

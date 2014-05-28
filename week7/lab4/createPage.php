@@ -91,7 +91,7 @@ Landi lab 4
                     <h1 class="text-center">Add New Record</h1>
                 </div>
                 <div class="modal-body clearfix">
-                    <form name="mainform" action="#" method="post" class="form col-md-12 center-block">
+                    <form name="mainform" action="#" method="post" class="col-md-12 center-block">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" value="" class="form-control input-lg"/>          
@@ -106,11 +106,13 @@ Landi lab 4
                         </div>
                         <div class="form-group">
                             <label for="state">State</label>
-                            <select id="state" name="state">
+                            <select id="state" name="state" >
                                 <?php
                                 if(count($state_list)){
-                                    foreach($state_list as $value)
-                                        {echo '<option>',$value,'</option>';}    
+                                    foreach($state_list as $key => $value){
+                                        echo '<option value="'.$key.'">',$value,'</option>';                               
+                                    } 
+                                    
                                     }
                                     ?>
                             </select>                           
