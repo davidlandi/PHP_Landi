@@ -95,8 +95,9 @@ class Signup {
         else if(!validator::nameIsValid($this->getUsername())){
             $this->errors["username"]="Entry Error"."username is not valid";
         }
-        
+      
         return ( empty($this->errors["username"]) ? true : false ) ;
+        
     }
     
     /**
@@ -106,19 +107,25 @@ class Signup {
     * @return boolean
     */    
     public function passwordEntryIsValid() {
-        
-         //todo put logic here (same as email)
-        // also check if it matches confirmpassword
         $password = $this->getPassword();
+        $confirm = $this->getConfirmpassword();
         
-        if(empty($password)){
-        $this ->errors["password"] = "Required Feild"."Please enter a password";
-        }
-        else if($this->getConfirmpassword()!== $this->getPassword()){
-            $this->errors ["password"] = "Entry Error"."Password must be greater than 6 characters.";
-        }
-        
-        return ( empty($this->errors["password"]) ? true : false ) ;
+        if ( empty($password) ) {
+            $this->errors["password"] = "Password is missing.";
+         } else if ( !Validator::passwordIsValid($this->getPassword()) ) {
+            $this->errors["password"] = "Password is not valid. Password must be at least 6 characters long";                
+         }
+         
+         if ( empty($confirm) ) {
+            $this->errors["confirmpassword"] = "Confirm Password is missing.";
+         } else if ( !Validator::passwordIsValid($this->getConfirmpassword()) ) {
+            $this->errors["confirmpassword"] = "Confirm Password is not valid. Confirm Password must be at least 6 characters long";                
+         }
+         
+         if ($password != $confirm) {
+             $this->errors["confirmpassword"] = "Confirm Password does not match.";
+         }         
+            return ( empty($this->errors["password"]) ? true : false ) ;
     }
     
     
