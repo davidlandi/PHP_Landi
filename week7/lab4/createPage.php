@@ -83,18 +83,15 @@ Landi lab 4
     ?>
 <!-- ....................................................................... -->
 <!-- .......................... Main content ............................... -->
-    <div id="loginModal" class="modal show" tabindex="-1" tabindex="-1"
-             role="dialog" aria-hidden="true">
+    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"
-                            aria-hidden="true">x</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                     <h1 class="text-center">Add New Record</h1>
                 </div>
                 <div class="modal-body clearfix">
-                    <form name="mainform" action="#" method="post"
-                        class="form col-md-12 center-block">
+                    <form name="mainform" action="#" method="post" class="form col-md-12 center-block">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" value="" class="form-control input-lg"/>          
@@ -112,11 +109,8 @@ Landi lab 4
                             <select id="state" name="state">
                                 <?php
                                 if(count($state_list)){
-                                    foreach($state_list as $value){
-                                        echo '<option>',$value,'</option>';
-                                        
-                                    }
-                                    
+                                    foreach($state_list as $value)
+                                        {echo '<option>',$value,'</option>';}    
                                     }
                                     ?>
                             </select>                           
