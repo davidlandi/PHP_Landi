@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <!--
-
+David Landi
+5/14
+Final PHP Project
+landing Page
 -->
 <html lang="en">
+<!--{LOAD CSS & GOOGLE FONTS}..................................................................................... -->    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +14,18 @@
         <link href="css/landi.css" rel="stylesheet" media="all">
         <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-        <script src="js//jquery.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="js/bootstrap.js"></script> 
-        <script src="js/landi.js"></script> 
         <title>Home</title>
     </head>
     <body>
-<!-- ......................................................NAV SECTION............................................ -->         
+<!--{END CSS & GOOGLE FONTS}...................................................................................... -->
+
+<!--{GLOBAL PHP}.................................................................................................. -->
+        <?php
+        // put your code here
+        ?>
+<!--{End PHP}..................................................................................................... -->
+
+<!--{Main Navigation}............................................................................................. -->          
         <div class="navbar navbar-inverse ">
             <div class="container">
                 <div class="navbar-header">
@@ -39,9 +46,10 @@
                 </div>
             </div>
         </div>
-<!-- .............................................................................................................. -->
-<!-- ..................................................MAIN CONTENT SECTION........................................ -->
-        <div class="container shadow colorWhite ">
+<!--{End NAVIGATION}.............................................................................................. -->
+
+<!--{MAIN CONTENT}................................................................................................ -->
+        <div class="container shadow colorWhite">
             <div class="jumbotron text-center shadow marginTop logoSubFont">
                 <h1 class="logoFont">DL Web Portfolio Builder</h1>
                 <h3>Create your own signal page web portfolio to help set you apart from other candidates.</h3>
@@ -145,9 +153,14 @@
                     </div>
                 </div>
             </div>
-        </div><!-- end Main Container -->
-       
-        
-<!-- .............................................................................................................. -->
+        </div><!-- end Main Container -->       
+<!--{END CONTENT}................................................................................................. -->
+
+<!--{lOAD JAVASCRIPT}............................................................................................. -->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.js"></script> 
+        <script src="js/landi.js"></script>
+<!--{END JAVASCRIPT}............................................................................................... -->        
     </body>
 </html>
