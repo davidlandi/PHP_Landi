@@ -14,11 +14,11 @@ class DB {
    /**
     * Setter for the database
     */
-   public function setDB(){
+   public function setDb(){
        try {
             $this->db = new PDO(Config::DB_DNS, Config::DB_USER, Config::DB_PASSWORD);
         } catch (Exception $ex) {
-            var_dump($ex);
+            
            $this->closeDB();
         }
    }

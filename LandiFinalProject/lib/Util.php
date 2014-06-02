@@ -19,9 +19,9 @@ class Util {
     /**
      * Static method for creating error messages in HTML pages
      */
-    public static function getErrMessageHTML($key,$arr){
+    public static function getErrorMessageHTML($key,$arr){
         $msg = (is_array($arr) && array_key_exists($key, $arr) ? $arr[$key] : NULL);
-        return (is_string($msg) && !empty($msg) ? "<p class=\"error\">$msg</p>":"");
+        return (is_string($msg) && !empty($msg) ? "<p class=\"error\">$msg</p>" : "");
     }
     
     /**

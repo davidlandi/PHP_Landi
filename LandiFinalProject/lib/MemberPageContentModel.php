@@ -13,30 +13,30 @@
  */
 class MemberPageContentModel {
     
-    private $theme;
-    private $title;
-    private $sub_title;
-    private $skill_one;
-    private $skill_two;
-    private $skill_three;
-    private $job_title;
-    private $job_start_date;
-    private $job_end_date;
-    private $job_responsibilities;
-    private $school_name;
-    private $degree_program;
-    private $degree_type;
-    private $degree_status;
-    private $school_comments;
-    private $summary;
-    private $objective;
-    private $git_url;
-    private $fb_url;
-    private $linked_url;
-    private $phone;
-    private $contact_email;
-    private $city;
-    private $states;
+    public $theme;
+    public $title;
+    public $sub_title;
+    public $skill_one;
+    public $skill_two;
+    public $skill_three;
+    public $job_title;
+    public $job_start_date;
+    public $job_end_date;
+    public $job_responsibilities;
+    public $school_name;
+    public $degree_program;
+    public $degree_type;
+    public $degree_status;
+    public $school_comments;
+    public $summary;
+    public $objective;
+    public $git_url;
+    public $fb_url;
+    public $linked_url;
+    public $phone;
+    public $contact_email;
+    public $city;
+    public $states;
     
     function __construct($paramArr = array()) {
         $this->map($paramArr);
