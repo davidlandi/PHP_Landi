@@ -10,7 +10,7 @@ class NewMemberSignUp extends DB {
     public function __construct(){
         $this->setDb();
     }
-    public function addNewMember(AddNewMemberModel $dataModel){
+    public function addNewMember(NewMemberModel $dataModel){
         $result = false;
         
         $email = $dataModel->getEmail();
