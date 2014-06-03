@@ -6,33 +6,49 @@ class Passcode {
     /**
      * Global private var
      */
-    private $passcode;
+    private $password;
+    private $email;
     
     /**
      * Constuctor
      */
     function __construct() {
-        $this->setPasscode(filter_input(INPUT_POST, 'passcode'));
+        $this->setPassword(filter_input(INPUT_POST, 'password'));
+        $this->setEmail(filter_input(INPUT_POST,'email'));
     }
     
     /**
-     * Get passcod
+     * Get password
      */
-    public function getPasscode(){
-        return $this->passcode;
+    public function getPassword(){
+        return $this->password;
     }
     
     /**
-     * Set passcode
+     * Get email
      */
-    public function setPasscode($passcode){
-        $this->passcode = $passcode;
+    public function getEmail() {
+        return $this->email;
+    }
+
+        
+    /**
+     * Set password
+     */
+    public function setPassword($password){
+        $this->passcode = $password;
     }
     
+    /**
+     *  Set Email
+     */
+    public function setEmail($email) {
+        $this->email = $email;
+    }
+
+        
     /**
      * Valdiation for passcode
      */
-    public function isValidPasscode(){
-        return($this->getPasscode() === Config::PASS_CODE ? true : false);
-    }
+    
 }

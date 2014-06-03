@@ -24,7 +24,18 @@ INFO
 
 -->
         <?php
-        // put your code here
+        Util::confirmAccess();
+        $content = new MemberPageContent();
+        
+        if(Util::isPostRequest()){
+            $MemberPageContentModel = new MemberPageContentModel($_POST);
+            
+            if($content->create($MemberPageContentModel)){
+                echo '<p>Content has been added</p>';
+                
+            }
+            else{echo '<p>Error. Content could not be added.</p>';}
+        }
         ?>
 <!--{END PHP}..................................................................................................... -->
 

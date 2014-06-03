@@ -21,6 +21,7 @@ class DB {
             
            $this->closeDB();
         }
+        return $this->db;//check this could be a issue 
    }
    
    /**

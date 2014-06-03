@@ -6,7 +6,7 @@
  * @author David
  */
 class MemberPageContent extends DB {
-    public function __construct(){
+     function __construct(){
         $this->setDb();
     }
     public function create($MemberPageContentModel){
