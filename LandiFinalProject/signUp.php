@@ -24,14 +24,18 @@ INFO
 
 -->
         <?php
-        Util::confirmAccess();
+        
+        
+        
+    
         $newMember = new SignUp();
         
         if(Util::isPostRequest()){
-            $SignUpModel = new SignUpModel($_POST);
+            $SignupModel = new SignupModel($_POST);
             
-            if($newMember->create($SignUpModel)){
+            if($newMember->create($SignupModel)){
                 echo '<p>New member has been added</p>';
+                Util::redirect('logIn');
                 
             }
             else{echo '<p>Error. New member could not be added.</p>';}
@@ -52,9 +56,10 @@ INFO
                alt="">
             <div class="container signInFrm">
             <form name="signUp" action="#" method="post">
-                <input class="form-control input-lg inputMargTop" type="text" name="website" value="" placeholder="Website Name" required autofocus>
-                <input class="form-control input-lg " type="text" name="email" value="" placeholder="email" required>
-                <input class="form-control input-lg" type="password" name="password" value="" placeholder="password" required>
+                <input class="form-control input-lg inputMargTop" type="text" id="website" name="website" value="" placeholder="Website Name" required autofocus> 
+                <input class="form-control input-lg " type="text" id="email" name="email" value="" placeholder="email" required>
+                <input class="form-control input-lg" type="password" id="password" name="password" value="" placeholder="password" required>
+                
                
                 
                 <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign Up</button>           

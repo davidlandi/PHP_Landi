@@ -24,18 +24,8 @@ INFO
 
 -->
         <?php
-        Util::confirmAccess();
-        $content = new MemberPageContent();
         
-        if(Util::isPostRequest()){
-            $MemberPageContentModel = new MemberPageContentModel($_POST);
-            
-            if($content->create($MemberPageContentModel)){
-                echo '<p>Content has been added</p>';
-                
-            }
-            else{echo '<p>Error. Content could not be added.</p>';}
-        }
+
         ?>
 <!--{END PHP}..................................................................................................... -->
 
@@ -96,7 +86,7 @@ INFO
                     <img src="img/theme3Admin.png" alt="" class="img-responsive">
                    
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 margTop">
+                <div class="col-md-12 col-sm-12 col-xs-12 margTop" >
                     <select class="form-control margB">
                         <option>Theme 1</option>
                         <option>Theme 2</option>
@@ -270,15 +260,15 @@ INFO
                 <div class="col-md-6 col-sm-6 col-xs-12 margTop">
                     <div class="form-group">
                         <label for="gitHub">Git Hub </label>
-                        <input type="url" class="form-control" id="gitHub" placeholder="url">
+                        <input type="text" class="form-control" id="gitHub" placeholder="url">
                     </div>
                     <div class="form-group">
                         <label for="fbook">Facebook</label>
-                        <input type="url" class="form-control" id="fbook" placeholder="url">
+                        <input type="text" class="form-control" id="fbook" placeholder="url">
                     </div>
                     <div class="form-group">
                         <label for="linkedin">LinkedIn</label>
-                        <input type="url" class="form-control" id="linkedin" placeholder="url">
+                        <input type="text" class="form-control" id="linkedin" placeholder="url">
                     </div>
                     <hr>
                 </div> 

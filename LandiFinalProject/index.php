@@ -54,7 +54,7 @@ landing Page
                 <h1 class="logoFont">DL Web Portfolio Builder</h1>
                 <h3>Create your own signal page web portfolio to help set you apart from other candidates.</h3>
                 <p>SignUp, Customize and Submit. 3 easy steps and your done.</p><br>
-                <p><a class="btn  btn-success" href="#signup">Get Started!</a></p>
+                <p><a class="btn  btn-success" href="signUp.php">Get Started!</a></p>
             </div>
             <div class="container mainFont"><!-- Start step1 container -->
                 <div class="row">

@@ -15,12 +15,13 @@
 <!--.............................. PHP Section.............................. -->        
         <?php
         
+
         ?>
 <!--........................................................................ -->
 
 <!--...............................Html Section............................. -->
         <div class="container text-center">
-            <a href="#" title="Home"><img class="logo center-block img-responsive" src="img/logoDL.png" alt=""></a>
+            <a href="index.php" title="Home"><img class="logo center-block img-responsive" src="img/logoDL.png" alt=""></a>
             <h1 class="frmHeader">Welcome back. Please log in to continue.</h1>
             <img class="profImg img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                alt="">
@@ -32,7 +33,7 @@
                 <label class="checkbox pull-left"><input type="checkbox" value="remeber-me"> Remember Me</label>
             </form>
             </div>
-            <a href="#" title="Sign Up Page" class="newAcc">Create a new account</a>
+            <a href="signUp.php" title="Sign Up Page" class="newAcc">Create a new account</a>
             
         </div>
          

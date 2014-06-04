@@ -47,8 +47,9 @@ class Passcode {
     }
 
         
-    /**
-     * Valdiation for passcode
-     */
+    public function isValidPasscode(){
+        // shortcut for if else checks to see if true (else) : false
+        return ( $this->getPassword() === Config::PASS_CODE ? true : false );
+    }
     
 }
