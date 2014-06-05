@@ -14,7 +14,23 @@
     <body>
 <!--.............................. PHP Section.............................. -->        
         <?php
+        $userLogin = new Login();
+        $dataModel = new UserSignUpModel(filter_input_array(INPUT_POST));
+       
         
+        if(! isset($_SESSION['validcode'])){
+            $_SESSION['validcode'] = false;
+        }
+        if(Util::isPostRequest()){
+            if($userLogin->emailExists($dataModel)){
+                if($userLogin->validLogin($dataModel)){
+                    $_SESSION['validcode'] = true;
+                    
+                    header("Location: newcontentfrm.php");
+                }
+            }
+            else{echo "error";}
+        }
 
         ?>
 <!--........................................................................ -->

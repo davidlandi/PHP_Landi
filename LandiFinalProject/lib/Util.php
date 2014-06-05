@@ -34,6 +34,15 @@ class Util {
         return (is_string($msg) && !empty($msg) ? "<p class=\"error\">$msg</p>" : "");
     }
     
+     public static function checkLogout() {
+        
+        $logout = filter_input(INPUT_GET, 'logout');
+        if ( $logout == 1 ) {
+           $_SESSION['id'] = null;
+            session_destroy();
+        }  
+    }
+    
     /**
      * Static functon used to redirect if condition is not met.
      */
@@ -43,11 +52,11 @@ class Util {
     }
     
     /**
-     * Static function used to redirect user back to home page untill password is confirmed
+     * Static function used to redirect user back to signup page untill password is confirmed
      */
-    public static function confirmAccess(){
-        if(!isset($_SESSION['validcode']) || !$_SESSION['validcode']){
-            Util::redirect('index');
+    public static function confirmAccess() {
+        if ( !isset($_SESSION['id']) || !$_SESSION['id'] ) {
+           Util::redirect('signup');
         }
     }
 }

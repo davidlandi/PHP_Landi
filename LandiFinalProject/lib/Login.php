@@ -30,6 +30,74 @@ public static function confirmAccess(){
             header("Location:login.php");
         }
     }
+    
+    /**
+     * checking user login against database
+     * @param SignupModel $vlModel
+     * @return boolean
+     */
+    public function validLogin(SignupModel $vlModel){
+        $email = $vlModel->getEmail();
+        $valid = false;
+        
+        if ( null !== $this->getDB() ){
+            $dbs = $this->getDB()->prepare('select user_id, password from users where email = :email limit 1');
+            $dbs->bindParam(':email', $email, PDO::PARAM_STR);
+            
+            if ( $dbs->execute() && $dbs->rowCount() > 0){
+                
+                $results = $dbs->fetch(PDO::FETCH_ASSOC);
+            }
+            $validPassword = sha1($vlModel->getPassword());
+            if ($results['password'] == $validPassword){
+                $valid = true;
+                $_SESSION['id'] = $results['user_id'];
+            }
+            
+        }
+        return $valid;
+    }
+    
+    /**
+     * 
+     * checking for website name in database
+     */
+    public function webNameExists(UserSignUpModel $webModel){
+        $webname = $webModel->getWebsite();
+        $exists = false;
+        
+        if(null !== $this->getDB()){
+            $dbs = $this->getDB()->prepare('select website from users where website = :website limit 1');
+            $dbs->bindParam(':website', $webname, PDO::PARAM_STR);
+            
+            if($dbs->execute() && $dbs->rowCount() > 0){
+                $exists = true;
+            }
+            return $exists;
+        }
+    }
+    
+    /**
+     * Checking database to see if email is present
+     * @param UserSignUpModel $emailModel
+     * @return boolean
+     */
+    public function emailExists(UserSignUpModel $emailModel){
+        $email = $emailModel->getEmail();
+        $exists = false;
+        
+        if ( null !== $this->getDB() ) {
+            $dbs = $this->getDB()->prepare('select email from users where email = :email limit 1');
+            $dbs->bindParam(':email', $email, PDO::PARAM_STR);
+            
+            if ( $dbs->execute() && $dbs->rowCount() > 0 ) {
+                $exists = true;
+            }
+            
+        }
+        return $exists;
+        
+    }
 
     
 }

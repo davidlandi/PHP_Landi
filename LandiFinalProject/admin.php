@@ -24,7 +24,22 @@ INFO
 
 -->
         <?php
+        Util::checkLogout();
+        Util::confirmAccess();
         
+        $content = new UserContent();
+        $newContent = $content->getContent();
+        
+        if(Util::isPostRequest()){
+           $content= filter_input_array(INPUT_POST);
+           $content['title'] = $updatedInfo['title'];  
+           $content['theme'] = $updatedInfo['theme'];  
+           $content['address'] = $updatedInfo['address'];  
+           $content['phone'] = $updatedInfo['phone'];  
+           $content['email'] = $updatedInfo['email'];              
+           $content['content'] = $updatedInfo['about']; 
+            
+        }
 
         ?>
 <!--{END PHP}..................................................................................................... -->

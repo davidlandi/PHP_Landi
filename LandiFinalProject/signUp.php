@@ -24,22 +24,32 @@ INFO
 
 -->
         <?php
+
+        $newMember = new UserSignUp();
+        $dataModel = new UserSignUpModel(filter_input_array(INPUT_POST));
         
-        
-        
-    
-        $newMember = new SignUp();
+        if(! isset($_SESSION['validcode'])){
+            $_SESSION['validcode'] = false;
+        }
         
         if(Util::isPostRequest()){
-            $SignupModel = new SignupModel($_POST);
-            
-            if($newMember->create($SignupModel)){
-                echo '<p>New member has been added</p>';
-                Util::redirect('logIn');
+            if(Validator:: emailIsValid(filter_input(INPUT_POST, 'email'))&& 
+               Validator:: passwordIsValid(filter_input(INPUT_POST, 'password'))&&
+               Validator:: websiteIsValid(filter_input(INPUT_POST, website))){
                 
+                $id = $newMember->create($dataModel);
+                if(id){
+                    $_SESSION['validcode'] = true;
+                    $webname = $dataModel->getWebsite();
+                    header("Location: logIn.php");
+                }
             }
-            else{echo '<p>Error. New member could not be added.</p>';}
         }
+        
+        
+                
+                
+        
 
         ?>
 <!--{END PHP}..................................................................................................... -->

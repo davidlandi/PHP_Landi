@@ -11,7 +11,7 @@ Users Page
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="<?php echo $theme ?>" rel="stylesheet" media="all">
+        <link href="css/userThemeOne.css" rel="stylesheet" media="all">
         <link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
@@ -67,7 +67,7 @@ INFO
         <div class="container">
             <div class="row"><!--{HEADER SECTION}-->
                 <div class="col-md-8 ">
-                    <h1 class="nameFont"><?php echo $website ?></h1>
+                    <h1 class="nameFont">Your Name</h1>
                     <p class="titleFont">Your Title</p>
                 </div>
                 <div class="col-md-4 tPad">
